@@ -43,11 +43,6 @@
   
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-<<<<<<< HEAD
-=======
-  <script src="https://cdn.tailwindcss.com"></script>
-
->>>>>>> acquirer-new-branch
   <script>
     tailwind.config = {
       theme: {
@@ -97,40 +92,29 @@
   
   <!-- Custom Styles -->
   <style>
-    /* Custom scrollbar */
     ::-webkit-scrollbar {
       width: 6px;
     }
-    
     ::-webkit-scrollbar-track {
       background: #f1f5f9;
     }
-    
     ::-webkit-scrollbar-thumb {
       background: #cbd5e1;
       border-radius: 3px;
     }
-    
     ::-webkit-scrollbar-thumb:hover {
       background: #94a3b8;
     }
-    
-    /* Smooth scrolling */
     html {
       scroll-behavior: smooth;
     }
-    
-    /* Focus styles */
     *:focus {
       outline: none;
     }
-    
     *:focus-visible {
       outline: 2px solid #3b82f6;
       outline-offset: 2px;
     }
-    
-    /* Loading animation */
     .loading {
       display: inline-block;
       width: 20px;
@@ -140,43 +124,32 @@
       border-top-color: #fff;
       animation: spin 1s ease-in-out infinite;
     }
-    
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
-    
-    /* Gradient text */
     .gradient-text {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    
-    /* Card hover effects */
     .card-hover {
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    
     .card-hover:hover {
       transform: translateY(-8px);
       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     }
-    
-    /* Glass morphism effect */
     .glass {
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
-    
-    /* Button animations */
     .btn-primary {
       position: relative;
       overflow: hidden;
       transition: all 0.3s ease;
     }
-    
     .btn-primary::before {
       content: '';
       position: absolute;
@@ -187,7 +160,6 @@
       background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
       transition: left 0.5s;
     }
-    
     .btn-primary:hover::before {
       left: 100%;
     }
@@ -253,7 +225,6 @@
   
   <!-- Loading Screen Script -->
   <script>
-    // Hide loading screen when page loads
     window.addEventListener('load', function() {
       const loadingScreen = document.getElementById('loading-screen');
       if (loadingScreen) {
@@ -265,8 +236,6 @@
         }, 500);
       }
     });
-    
-    // Show loading screen on page unload
     window.addEventListener('beforeunload', function() {
       const loadingScreen = document.getElementById('loading-screen');
       if (loadingScreen) {
@@ -275,16 +244,6 @@
       }
     });
   </script>
-  
-  <!-- Analytics (Replace with your tracking code) -->
-  <!-- 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID');
-  </script>
-  -->
+
 </body>
 </html>
