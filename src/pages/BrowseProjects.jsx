@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import OtherNavbar from '../components/layout/OtherNavbar';
 
 const projects = [
@@ -100,6 +101,7 @@ const categories = ["All", "Robotics", "Fintech", "AI/ML", "GreenTech", "IoT", "
 export default function BrowseProjects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [sortBy, setSortBy] = useState("funding");
+  const navigate = useNavigate();
 
   const filteredProjects = projects.filter(project => 
     selectedCategory === "All" || project.category === selectedCategory
@@ -118,6 +120,23 @@ export default function BrowseProjects() {
     return 0;
   });
 
+  const handleMakeOffer = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('Make Offer button clicked!'); // Debug ke liye
+    
+    // Try different possible paths
+    try {
+      navigate('/offers');
+    } catch (error) {
+      console.error('Navigation error:', error);
+      // Alternative paths to try
+      // navigate('/Offers');
+      // navigate('./Offers');
+      // window.location.href = '/offers';
+    }
+  };
+
   return (
     <>
       <OtherNavbar />
@@ -131,19 +150,22 @@ export default function BrowseProjects() {
               Discover innovative startups and investment opportunities
             </p>
           </div>
-          <button className="mt-4 md:mt-0 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors">
-            Headstart Contact
-          </button>
+            <button className="mt-4 md:mt-0 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors">
+              Headstart Contact
+            </button>
         </div>
 
         {/* Main Navigation Buttons - positioned right under the description */}
         <div className="flex gap-3 mb-6">
-          <button className="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors">
-            Browse Projects
-          </button>
-          <button className="px-4 py-2 bg-gray-200 text-gray-700 text-sm rounded-lg hover:bg-gray-300 transition-colors">
-            My Offers
-          </button>
+            <button className="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors">
+              Browse Projects
+            </button>
+            <button
+              className="px-4 py-2 bg-gray-200 text-gray-700 text-sm rounded-lg hover:bg-gray-300 transition-colors"
+              onClick={() => navigate('/offers')}
+            >
+              My Offers
+            </button>
         </div>
 
         {/* Category Filters and Sort */}
@@ -227,7 +249,10 @@ export default function BrowseProjects() {
                 </button>
               </div>
 
-              <button className="w-full mt-3 bg-gray-100 text-sm text-gray-800 py-2 rounded-lg hover:bg-gray-200 transition-colors">
+              <button 
+                onClick={handleMakeOffer}
+                className="w-full mt-3 bg-gray-100 text-sm text-gray-800 py-2 rounded-lg hover:bg-gray-200 transition-colors"
+              >
                 Make an Offer
               </button>
             </div>

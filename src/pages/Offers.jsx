@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import OtherNavbar from '../components/layout/OtherNavbar';
 
 const offers = [
@@ -100,6 +101,7 @@ export default function MyOffers() {
   const [sortBy, setSortBy] = useState("newest");
   const [showFilters, setShowFilters] = useState(false);
   const [showSort, setShowSort] = useState(false);
+  const navigate = useNavigate();
 
   // Helper function to convert time ago to sortable number
   const getTimeValue = (timeAgo) => {
@@ -153,7 +155,10 @@ export default function MyOffers() {
 
         {/* Main Navigation Buttons */}
         <div className="flex gap-3 mb-6">
-          <button className="px-4 py-2 bg-gray-200 text-gray-700 text-sm rounded-lg hover:bg-gray-300 transition-colors">
+          <button
+            className="px-4 py-2 bg-gray-200 text-gray-700 text-sm rounded-lg hover:bg-gray-300 transition-colors"
+            onClick={() => navigate('/browseprojects')}
+          >
             Browse Projects
           </button>
           <button className="px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors">
