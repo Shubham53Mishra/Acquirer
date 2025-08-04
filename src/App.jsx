@@ -5,6 +5,7 @@ import HeroSection from './components/sections/HeroSection';
 import FeaturedPrototype from './components/sections/FeaturedPrototype';
 import BrowseSection from './components/sections/BrowseSection';
 import { prototypes } from './data/prototypes';
+import Home from './pages/Home';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <h1 className="text-4xl font-bold text-blue-600">Welcome to Prototype Vault</h1>
         <p className="mt-4 text-gray-600">Explore and submit ideas</p>
       </div>
+      <Home />
     </div>
   );
 }
