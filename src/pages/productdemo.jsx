@@ -14,12 +14,6 @@ const ProductDemo = () => {
       <OtherNavbar />
       {/* Main Card Full Width */}
       <div className="bg-white rounded-2xl shadow-lg mx-0 px-12 py-12 mt-8">
-        {/* Breadcrumb above header/tabs */}
-        <div className="flex items-center gap-2 text-xs mb-6 text-gray-400">
-          <span className="hover:underline cursor-pointer font-medium">← Back to Exchange</span>
-          <span className="mx-2">|</span>
-          <span className="font-medium text-gray-600">NeuroPath AI</span>
-        </div>
         {/* Header and Tabs inside card */}
         <div className="pb-8">
           <h1 className="text-3xl md:text-4xl font-semibold text-gray-600">Browse Projects</h1>
@@ -28,10 +22,25 @@ const ProductDemo = () => {
             <button className="px-4 py-2 bg-blue-600 text-white rounded">Browse Projects</button>
             <button className="px-4 py-2 bg-gray-200 rounded">My Offers</button>
           </div>
+          {/* Breadcrumb below buttons */}
+          <div className="flex items-center gap-2 text-xs mb-6 text-gray-400">
+            <span className="hover:underline cursor-pointer font-medium">← Back to Exchange</span>
+            <span className="mx-2">|</span>
+            <span className="font-medium text-gray-600">NeuroPath AI</span>
+          </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           {/* Left Column */}
           <div>
+            {/* Trending Badge Card */}
+            <div className="flex gap-2 mb-3">
+              <span className="flex items-center gap-1 px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold shadow">
+                <span className="text-lg">🔥</span> TRENDING
+              </span>
+              <span className="flex items-center gap-1 px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold shadow">
+                Series A Ready
+              </span>
+            </div>
             <h2 className="text-2xl font-semibold mb-2 text-gray-700">NeuroPath AI</h2>
             <p className="text-gray-600 mb-2">
               Revolutionizing neurological disease detection platform using advanced imaging analysis.
