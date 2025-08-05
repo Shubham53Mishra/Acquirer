@@ -3,6 +3,8 @@ import OtherNavbar from '../components/layout/OtherNavbar';
 import { MapPin, Star, TrendingUp, Medal, Eye, Clock, Cloud, Brain, CheckCircle, RefreshCw } from 'lucide-react';
 
 const ProductDetails = () => {
+  const [activeTab, setActiveTab] = React.useState('Technical Details');
+
   return (
     <div className="min-h-screen bg-gray-50 w-full">
       <div className="mt-12">
@@ -54,32 +56,109 @@ const ProductDetails = () => {
               </div>
               {/* Sub Navigation Tabs */}
               <div className="flex flex-wrap gap-4 mt-2 mb-6 text-sm font-medium">
-                <span className="text-blue-600 underline cursor-pointer">Technical Details</span>
-                <span className="text-gray-700 cursor-pointer">Overview</span>
-                <span className="text-gray-700 cursor-pointer">Features</span>
-                <span className="text-gray-700 cursor-pointer">Performance</span>
+                <span
+                  className={`cursor-pointer ${activeTab === 'Overview' ? 'text-blue-600 underline' : 'text-gray-700'}`}
+                  onClick={() => setActiveTab('Overview')}
+                >
+                  Overview
+                </span>
+                <span
+                  className={`cursor-pointer ${activeTab === 'Technical Details' ? 'text-blue-600 underline' : 'text-gray-700'}`}
+                  onClick={() => setActiveTab('Technical Details')}
+                >
+                  Technical Details
+                </span>
+                <span
+                  className={`cursor-pointer ${activeTab === 'Features' ? 'text-blue-600 underline' : 'text-gray-700'}`}
+                  onClick={() => setActiveTab('Features')}
+                >
+                  Features
+                </span>
+                <span
+                  className={`cursor-pointer ${activeTab === 'Performance' ? 'text-blue-600 underline' : 'text-gray-700'}`}
+                  onClick={() => setActiveTab('Performance')}
+                >
+                  Performance
+                </span>
               </div>
-              {/* Technical Architecture */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                <div className="bg-gray-50 border rounded p-4">
-                  <h4 className="font-semibold mb-2 flex items-center gap-2"><Brain className="w-4 h-4 text-indigo-600" /> AI/ML Technology Stack</h4>
-                  <ul className="list-disc ml-4 text-gray-600 space-y-1">
-                    <li>TensorFlow 2.12+ with custom CNN architectures</li>
-                    <li>PyTorch for advanced research & experimentation</li>
-                    <li>CUDA-optimized GPUs (NVIDIA RTX 4090)</li>
-                    <li>Custom transformer models for sequence analysis</li>
-                  </ul>
+              {/* Tab Content */}
+              {activeTab === 'Overview' && (
+                <div className="bg-white border rounded-xl shadow p-6 mt-2">
+                  <h3 className="font-bold text-lg mb-4 text-gray-800">Overview</h3>
+                  <p className="text-gray-700 text-base">This is the overview section. Add your overview content here.</p>
                 </div>
-                <div className="bg-gray-50 border rounded p-4">
-                  <h4 className="font-semibold mb-2 flex items-center gap-2"><Cloud className="w-4 h-4 text-blue-600" /> Cloud Infrastructure</h4>
-                  <ul className="list-disc ml-4 text-gray-600 space-y-1">
-                    <li>AWS multi-region with HIPAA compliance</li>
-                    <li>Kubernetes orchestration for auto-scaling</li>
-                    <li>Redis Cluster for sub-second responses</li>
-                    <li>PostgreSQL with TimescaleDB for time-series data</li>
-                  </ul>
+              )}
+              {activeTab === 'Technical Details' && (
+                <div className="bg-white border rounded-xl shadow p-4 mt-2">
+                  <h3 className="font-bold text-lg mb-4 text-gray-800">
+                    Technical <span className="bg-blue-100 text-blue-700 px-1 py-0.5 rounded text-base">Architecture</span>
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {/* AI/ML Technology Stack */}
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="bg-green-100 text-green-700 rounded-full p-1"><Brain className="w-4 h-4" /></span>
+                        <span className="font-bold text-base text-gray-800">AI/ML Technology Stack</span>
+                      </div>
+                      <div className="flex flex-col gap-2">
+                        <div className="bg-gray-50 rounded-lg border px-2 py-2 flex items-center gap-2">
+                          <span className="w-2 h-2 bg-green-400 rounded-full inline-block"></span>
+                          <span className="text-gray-800 text-sm">TensorFlow 2.12+ with custom CNN architectures</span>
+                        </div>
+                        <div className="bg-gray-50 rounded-lg border px-2 py-2 flex items-center gap-2">
+                          <span className="w-2 h-2 bg-green-400 rounded-full inline-block"></span>
+                          <span className="text-gray-800 text-sm">PyTorch for advanced research & experimentation</span>
+                        </div>
+                        <div className="bg-gray-50 rounded-lg border px-2 py-2 flex items-center gap-2">
+                          <span className="w-2 h-2 bg-green-400 rounded-full inline-block"></span>
+                          <span className="text-gray-800 text-sm">CUDA-optimized GPU processing (RTX 4090)</span>
+                        </div>
+                        <div className="bg-gray-50 rounded-lg border px-2 py-2 flex items-center gap-2">
+                          <span className="w-2 h-2 bg-green-400 rounded-full inline-block"></span>
+                          <span className="text-gray-800 text-sm">Custom transformer models for sequence analysis</span>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Cloud Infrastructure */}
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="bg-gray-100 text-blue-700 rounded-full p-1"><Cloud className="w-4 h-4" /></span>
+                        <span className="font-bold text-base text-gray-800">Cloud Infrastructure</span>
+                      </div>
+                      <div className="flex flex-col gap-2">
+                        <div className="bg-gray-50 rounded-lg border px-2 py-2 flex items-center gap-2">
+                          <span className="w-2 h-2 bg-indigo-400 rounded-full inline-block"></span>
+                          <span className="text-gray-800 text-sm">AWS multi-region deployment with HIPAA compliance</span>
+                        </div>
+                        <div className="bg-gray-50 rounded-lg border px-2 py-2 flex items-center gap-2">
+                          <span className="w-2 h-2 bg-indigo-400 rounded-full inline-block"></span>
+                          <span className="text-gray-800 text-sm">Kubernetes orchestration for auto-scaling</span>
+                        </div>
+                        <div className="bg-gray-50 rounded-lg border px-2 py-2 flex items-center gap-2">
+                          <span className="w-2 h-2 bg-indigo-400 rounded-full inline-block"></span>
+                          <span className="text-gray-800 text-sm">Redis Cluster for sub-second response times</span>
+                        </div>
+                        <div className="bg-gray-50 rounded-lg border px-2 py-2 flex items-center gap-2">
+                          <span className="w-2 h-2 bg-indigo-400 rounded-full inline-block"></span>
+                          <span className="text-gray-800 text-sm">PostgreSQL with TimescaleDB for time-series data</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              )}
+              {activeTab === 'Features' && (
+                <div className="bg-white border rounded-xl shadow p-6 mt-2">
+                  <h3 className="font-bold text-lg mb-4 text-gray-800">Features</h3>
+                  <p className="text-gray-700 text-base">This is the features section. Add your features content here.</p>
+                </div>
+              )}
+              {activeTab === 'Performance' && (
+                <div className="bg-white border rounded-xl shadow p-6 mt-2">
+                  <h3 className="font-bold text-lg mb-4 text-gray-800">Performance</h3>
+                  <p className="text-gray-700 text-base">This is the performance section. Add your performance content here.</p>
+                </div>
+              )}
             </div>
             {/* RIGHT: Development Roadmap */}
             <div>
