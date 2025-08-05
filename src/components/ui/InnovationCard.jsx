@@ -37,7 +37,7 @@ const InnovationCard = ({ title, icon, color, description }) => {
       <div className={`w-8 h-8 ${getColorClasses()} rounded mb-3 flex items-center justify-center`}>
         {getIcon()}
       </div>
-      <h5 className="font-medium text-sm mb-1">{title}</h5>
+      <h5 className="font-medium text-sm mb-1 text-gray-600">{title}</h5>
       <p className="text-xs text-gray-700">
         {description || "Short description about this feature."}
       </p>
