@@ -100,7 +100,7 @@ const ProductDemo = () => {
               >Performance</span>
             </div>
             {/* Product Showcase */}
-            <ProductShowcase />
+            <ProductShowcase activeTab={activeTab} />
           </div>
           {/* Right Column */}
           <div className="flex flex-col gap-6">
