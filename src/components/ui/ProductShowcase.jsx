@@ -24,16 +24,16 @@ const ProductShowcase = () => {
       </div>
 
       {/* Confidential Prototype Banner */}
-      <div className="bg-orange-50 border border-orange-200 rounded p-3">
+      <div className="bg-orange-50 border border-orange-200 rounded p-10 text-lg">
         <div className="flex items-center gap-2 mb-1">
           <Lock className="w-4 h-4 text-orange-600" />
-          <span className="font-medium text-sm">Confidential Prototype</span>
+          <span className="font-medium text-sm text-gray-500">Confidential Prototype</span>
         </div>
         <p className="text-xs text-gray-600 mb-2">
           This prototype contains proprietary intellectual property (IP) and is 
           classified as confidential. Access requires proper authorization and NDA.
         </p>
-        <button className="bg-orange-500 text-white px-3 py-1 rounded text-xs font-medium hover:bg-orange-600 transition-colors">
+        <button className="bg-orange-500 text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-orange-600 transition-colors">
           Sign in to Access Content
         </button>
       </div>
