@@ -108,7 +108,7 @@ const ProductDemo = () => {
             {/* Pitch Recorded Video (from InteractiveDemo) */}
             {/* Revolutionary Technology */}
             <div className="bg-white rounded-lg shadow p-6">
-              <h3 className="text-xl font-semibold mb-4">Revolutionary Technology</h3>
+              <h3 className="text-xl font-semibold mb-4 text-gray-600">Revolutionary Technology</h3>
               <p className="text-gray-700 text-sm leading-relaxed mb-2">
                 NeuroPath AI represents a paradigm shift in neurological disease detection, leveraging cutting-edge artificial intelligence to identify early-stage neurological disorders through advanced imaging analysis. Our proprietary algorithms can detect subtle patterns in brain scans.
               </p>
