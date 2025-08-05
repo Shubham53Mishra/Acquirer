@@ -89,7 +89,7 @@ const ProductDetails = () => {
                 <div className="bg-green-600 rounded-lg p-6 text-white">
                   <div className="flex items-center justify-between mb-2">
                     <h5 className="font-semibold">Phase 1: Core AI Platform</h5>
-                    <span className="bg-green-500 px-4 py-1 rounded flex items-center gap-2 text-base font-bold"><CheckCircle className="w-5 h-5" /> COMPLETED</span>
+                    <span className="bg-white text-green-600 px-4 py-1 rounded flex items-center gap-2 text-base font-bold shadow"><CheckCircle className="w-5 h-5" /> COMPLETED</span>
                   </div>
                   <p className="text-xs mb-2">Developed foundational AI models, completed initial training on 250k+ brain scans, and validated with 6 leading medical centers.</p>
                   <div className="flex gap-2 text-xs">
@@ -101,7 +101,7 @@ const ProductDetails = () => {
                 <div className="bg-orange-500 rounded-lg p-6 text-white">
                   <div className="flex items-center justify-between mb-2">
                     <h5 className="font-semibold">Phase 2: Clinical Validation & FDA Submission</h5>
-                    <span className="bg-orange-400 px-4 py-1 rounded flex items-center gap-2 text-base font-bold"><RefreshCw className="w-5 h-5" /> IN PROGRESS</span>
+                    <span className="bg-white text-orange-500 px-4 py-1 rounded flex items-center gap-2 text-base font-bold shadow"><RefreshCw className="w-5 h-5" /> IN PROGRESS</span>
                   </div>
                   <p className="text-xs mb-2">Conducting clinical trials across 20 medical centers, preparing FDA 510(k) submission, and achieving 96%+ accuracy benchmarks.</p>
                   <div className="flex gap-2 text-xs">
@@ -113,7 +113,7 @@ const ProductDetails = () => {
                 <div className="bg-indigo-600 rounded-lg p-6 text-white">
                   <div className="flex items-center justify-between mb-2">
                     <h5 className="font-semibold">Phase 3: Commercial Launch & Scale</h5>
-                    <span className="bg-indigo-500 px-4 py-1 rounded flex items-center gap-2 text-base font-bold"><Clock className="w-5 h-5" /> PLANNED</span>
+                    <span className="bg-white text-indigo-600 px-4 py-1 rounded flex items-center gap-2 text-base font-bold shadow"><Clock className="w-5 h-5" /> PLANNED</span>
                   </div>
                   <p className="text-xs mb-2">FDA clearance, commercial launch with 200+ healthcare systems, international expansion, and Series B fundraising.</p>
                   <div className="flex gap-2 text-xs">
