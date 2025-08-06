@@ -160,7 +160,7 @@ const Overview = () => {
                   {/* Neural Network Architecture Card */}
                   <div className="bg-blue-50 rounded-2xl p-6 shadow flex flex-col gap-3">
                     <div className="flex items-center gap-2 mb-2">
-                      <Brain className="w-2 h-2 text-blue-600" />
+                      <Brain className="w-7 h-7 text-blue-600" /> {/* Increased icon size */}
                       <span className="font-semibold text-blue-700">Neural Network Architecture</span>
                     </div>
                     <div className="bg-white rounded-lg p-3 shadow text-sm mb-2">
@@ -179,7 +179,7 @@ const Overview = () => {
                   {/* Processing Capabilities Card */}
                   <div className="bg-green-50 rounded-2xl p-6 shadow flex flex-col gap-3">
                     <div className="flex items-center gap-2 mb-2">
-                      <Zap className="w-2 h-2 text-green-600" />
+                      <Zap className="w-7 h-7 text-green-600" /> {/* Increased icon size */}
                       <span className="font-semibold text-green-700">Processing Capabilities</span>
                     </div>
                     <div className="bg-white rounded-lg p-3 shadow text-sm mb-2">
@@ -202,17 +202,17 @@ const Overview = () => {
                 <h2 className="text-xl font-semibold mb-4 text-gray-800">Integration & Compatibility</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                   <div className="bg-orange-50 rounded-2xl p-6 shadow flex flex-col items-center">
-                    <Database className="w-3 h-3 text-orange-500 mb-2" />
+                    <Database className="w-8 h-8 text-orange-500 mb-2" /> {/* Increased icon size */}
                     <div className="font-semibold text-orange-700 mb-1">Healthcare Systems</div>
                     <div className="text-xs text-gray-600 text-center">Epic EHR Integration<br />Custom API Endpoints<br />Automation Support</div>
                   </div>
                   <div className="bg-purple-50 rounded-2xl p-6 shadow flex flex-col items-center">
-                    <FileText className="w-3 h-3 text-purple-500 mb-2" />
+                    <FileText className="w-8 h-8 text-purple-500 mb-2" /> {/* Increased icon size */}
                     <div className="font-semibold text-purple-700 mb-1">Medical Protocols</div>
                     <div className="text-xs text-gray-600 text-center">DICOM 3.0 Standard<br />HL7 FHIR<br />IHE Profiles<br />SNOMED CT Coding</div>
                   </div>
                   <div className="bg-green-50 rounded-2xl p-6 shadow flex flex-col items-center">
-                    <Shield className="w-3 h-3 text-green-500 mb-2" />
+                    <Shield className="w-8 h-8 text-green-500 mb-2" /> {/* Increased icon size */}
                     <div className="font-semibold text-green-700 mb-1">Security Standards</div>
                     <div className="text-xs text-gray-600 text-center">HIPAA Compliance<br />ISO 27001 Certified<br />SOC 2 Type II<br />FDA 510(k) Ready</div>
                   </div>
@@ -223,22 +223,22 @@ const Overview = () => {
                 <h2 className="text-xl font-semibold mb-4 text-gray-800">Supported Imaging Modalities</h2>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                   <div className="bg-white rounded-2xl shadow p-4 flex flex-col items-center">
-                    <Brain className="w-2 h-2 text-pink-500 mb-2" />
+                    <Brain className="w-7 h-7 text-pink-500 mb-2" /> {/* Increased icon size */}
                     <div className="font-semibold text-gray-800 mb-1">MRI Scans</div>
                     <div className="text-xs text-gray-600 text-center">T1, T2, FLAIR, DWI</div>
                   </div>
                   <div className="bg-white rounded-2xl shadow p-4 flex flex-col items-center">
-                    <Activity className="w-2 h-2 text-gray-700 mb-2" />
+                    <Activity className="w-7 h-7 text-gray-700 mb-2" /> {/* Increased icon size */}
                     <div className="font-semibold text-gray-800 mb-1">CT Scans</div>
                     <div className="text-xs text-gray-600 text-center">Contrast & Non-contrast</div>
                   </div>
                   <div className="bg-white rounded-2xl shadow p-4 flex flex-col items-center">
-                    <Zap className="w-2 h-2 text-yellow-500 mb-2" />
+                    <Zap className="w-7 h-7 text-yellow-500 mb-2" /> {/* Increased icon size */}
                     <div className="font-semibold text-gray-800 mb-1">PET Scans</div>
                     <div className="text-xs text-gray-600 text-center">FDG-PET, Amyloid PET</div>
                   </div>
                   <div className="bg-white rounded-2xl shadow p-4 flex flex-col items-center">
-                    <BarChart3 className="w-2 h-2 text-indigo-500 mb-2" />
+                    <BarChart3 className="w-7 h-7 text-indigo-500 mb-2" /> {/* Increased icon size */}
                     <div className="font-semibold text-gray-800 mb-1">SPECT</div>
                     <div className="text-xs text-gray-600 text-center">Perfusion, Diffusion</div>
                   </div>
