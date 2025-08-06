@@ -235,33 +235,37 @@ const ProductPerformance = () => {
                   gain: "+25.1%",
                 }
               ].map((item, i) => (
-                <div key={i} className={`rounded-xl border ${i === 2 ? "border-2 border-blue-400" : "border-blue-300"} p-3 mb-4 flex flex-col gap-2 bg-white shadow-sm`}>
+                <div key={i} className={`rounded-lg border ${i === 2 ? "border-2 border-blue-400" : "border-blue-300"} p-2 mb-2 flex flex-col gap-1 bg-white shadow-sm`}>
                   <div className="flex items-center justify-between mb-1">
-                    <span className="font-semibold text-gray-700 text-sm">{item.label}</span>
-                    <span className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-100 text-green-700 font-bold text-xs">
-                      <svg width="12" height="12" viewBox="0 0 20 20" fill="none"><path d="M10 14V6M10 6L6 10M10 6L14 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
+                    <span className="font-semibold text-gray-700 text-xs">{item.label}</span>
+                    <span className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-100 text-green-700 font-bold text-[10px]">
+                      <svg width="10" height="10" viewBox="0 0 20 20" fill="none"><path d="M10 14V6M10 6L6 10M10 6L14 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
                       {item.gain}
                     </span>
                   </div>
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center justify-between mb-1">
                     <div className="flex items-center gap-1">
-                      <span className="text-xs text-gray-500">NeuroPath AI</span>
-                      <span className="text-sm font-bold text-blue-700">{item.ai}%</span>
+                      <span className="text-[10px] text-gray-500">NeuroPath AI</span>
+                      <span className="text-xs font-bold text-blue-700">{item.ai}%</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <span className="text-xs text-gray-400">Traditional Methods</span>
-                      <span className="text-sm font-bold text-gray-500">{item.traditional}%</span>
+                      <span className="text-[10px] text-gray-400">Traditional Methods</span>
+                      <span className="text-xs font-bold text-gray-500">{item.traditional}%</span>
                     </div>
                   </div>
-                  <div className="flex gap-2 items-center">
-                    <div className="flex-1 flex flex-col gap-0.5">
-                      <div className="relative w-full h-2">
-                        {/* Gray bar as background */}
-                        <div className="absolute left-0 top-0 h-2 rounded bg-gray-200 w-full"></div>
-                        {/* Blue bar on top */}
-                        <div className="absolute left-0 top-0 h-2 rounded" style={{ width: `${item.ai}%`, background: "linear-gradient(90deg,#3b82f6 60%,#6366f1 100%)", zIndex: 1 }}></div>
-                        {/* Gray filled bar for traditional, clipped to its width */}
-                        <div className="absolute left-0 top-0 h-2 rounded bg-gray-500" style={{ width: `${item.traditional}%`, zIndex: 2, opacity: 0.7 }}></div>
+                  <div className="flex gap-1 items-center">
+                    {/* Blue bar */}
+                    <div className="flex-1 flex flex-col">
+                      <div className="relative w-full h-0.5">
+                        <div className="absolute left-0 top-0 h-0.5 rounded bg-blue-100 w-full"></div>
+                        <div className="absolute left-0 top-0 h-0.5 rounded" style={{ width: `${item.ai}%`, background: "linear-gradient(90deg,#3b82f6 60%,#6366f1 100%)" }}></div>
+                      </div>
+                    </div>
+                    {/* Gray bar */}
+                    <div className="flex-1 flex flex-col">
+                      <div className="relative w-full h-0.5">
+                        <div className="absolute left-0 top-0 h-0.5 rounded bg-gray-200 w-full"></div>
+                        <div className="absolute left-0 top-0 h-0.5 rounded bg-gray-500" style={{ width: `${item.traditional}%` }}></div>
                       </div>
                     </div>
                   </div>
