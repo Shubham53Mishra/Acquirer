@@ -8,6 +8,7 @@ import ProductDetails from './pages/ProductDetails';
 import Overview from './pages/overview';
 import Features from './pages/Features';
 import Profile from './pages/Profile';
+import CompanyDetails from './pages/Companydetails';
 
 export default function App() {
   return (
@@ -20,6 +21,8 @@ export default function App() {
       <Route path="/overview" element={<Overview />} />
       <Route path="/features" element={<Features />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/companydetails" element={<CompanyDetails />} />
+
 
     </Routes>
   );
