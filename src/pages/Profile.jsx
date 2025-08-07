@@ -80,7 +80,10 @@ const Profile = () => {
           </div>
           {/* Steps */}
           <div className="flex flex-wrap justify-between items-center mb-8">
-            <div className="flex flex-col items-center flex-1 min-w-[80px]">
+            <div
+              className="flex flex-col items-center flex-1 min-w-[80px] cursor-pointer"
+              onClick={() => navigate("/profile")}
+            >
               <div className="bg-blue-600 text-white rounded-full p-2 mb-1">
                 <User className="w-6 h-6" strokeWidth={2} />
               </div>
@@ -90,6 +93,7 @@ const Profile = () => {
               <span className="text-[10px] text-gray-400">
                 Basic details & identity
               </span>
+              <div className="w-12 h-1 bg-blue-600 rounded-full mt-2"></div>
             </div>
             <div
               className="flex-1 min-w-[80px] flex flex-col items-center cursor-pointer"
@@ -104,7 +108,7 @@ const Profile = () => {
               <span className="text-[10px] text-gray-400">
                 Business information
               </span>
-              <div className="w-12 h-1 bg-blue-600 rounded-full mt-2"></div>
+              {/* Only show the blue line under the active step */}
             </div>
             <div className="flex-1 min-w-[80px] flex flex-col items-center">
               <div className="bg-gray-200 text-gray-400 rounded-full p-2 mb-1">
