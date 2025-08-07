@@ -243,51 +243,70 @@ const Profile = () => {
                   placeholder="Enter your complete street address"
                 />
               </div>
-              <div>
-                <label className="block text-sm font-medium mb-1">City *</label>
-                <input
-                  className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                  type="text"
-                  placeholder="Enter your city"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-1">State *</label>
-                <select className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200">
-                  <option>Select state</option>
-                  <option>California</option>
-                  <option>Texas</option>
-                  <option>New York</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-1">ZIP Code *</label>
-                <input
-                  className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                  type="text"
-                  placeholder="Enter ZIP code"
-                />
-              </div>
-              <div className="md:col-span-2">
-                <label className="block text-sm font-medium mb-1">
-                  Professional Profiles
-                </label>
-                <div className="flex flex-col md:flex-row gap-2">
+              {/* Group City, State, ZIP Code in one row */}
+              <div className="md:col-span-2 flex flex-col md:flex-row gap-4">
+                <div className="flex-1">
+                  <label className="block text-sm font-medium mb-1">City *</label>
                   <input
-                    className="flex-1 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                    type="url"
-                    placeholder="LinkedIn Profile"
+                    className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                    type="text"
+                    placeholder="Enter your city"
                   />
+                </div>
+                <div className="flex-1">
+                  <label className="block text-sm font-medium mb-1">State *</label>
+                  <select
+                    className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 text-gray-400"
+                    onChange={e => e.target.classList.toggle('text-gray-400', e.target.selectedIndex === 0)}
+                    defaultValue=""
+                  >
+                    <option value="" disabled hidden>
+                      Select state
+                    </option>
+                    <option className="text-gray-900" value="California">California</option>
+                    <option className="text-gray-900" value="Texas">Texas</option>
+                    <option className="text-gray-900" value="New York">New York</option>
+                    <option className="text-gray-900" value="Other">Other</option>
+                  </select>
+                </div>
+                <div className="flex-1">
+                  <label className="block text-sm font-medium mb-1">ZIP Code *</label>
                   <input
-                    className="flex-1 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                    type="url"
-                    placeholder="Personal Website"
+                    className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                    type="text"
+                    placeholder="Enter ZIP code"
                   />
                 </div>
               </div>
               <div className="md:col-span-2">
-                <label className="block text-sm font-medium mb-1 mt-2">
+                <label className="block text-sm font-bold text-gray-600 mb-1">
+                  Professional
+                </label>
+                <div className="flex flex-col md:flex-row gap-2">
+                  <div className="flex-1">
+                    <label className="block text-xs font-semibold mb-1 flex items-center gap-1 text-gray-500">
+                      <Globe className="w-4 h-4 text-blue-600" /> LinkedIn Profile
+                    </label>
+                    <input
+                      className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                      type="url"
+                      placeholder="https://linkedin.com/in/yourprofile"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <label className="block text-xs font-semibold mb-1 flex items-center gap-1 text-gray-500">
+                      <Globe className="w-4 h-4 text-blue-600" /> Personal Website
+                    </label>
+                    <input
+                      className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                      type="url"
+                      placeholder="https://yourwebsite.com"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="md:col-span-2">
+                <label className="block text-sm font-medium mb-1 mt-2 text-gray-500">
                   Emergency Contact Information
                 </label>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
@@ -296,13 +315,18 @@ const Profile = () => {
                     type="text"
                     placeholder="Contact Name"
                   />
-                  <select className="border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200">
-                    <option>Select relationship</option>
-                    <option>Parent</option>
-                    <option>Sibling</option>
-                    <option>Spouse</option>
-                    <option>Friend</option>
-                    <option>Other</option>
+                  <select
+                    className="border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 text-gray-400"
+                    defaultValue=""
+                  >
+                    <option value="" disabled hidden>
+                      Select relationship
+                    </option>
+                    <option className="text-gray-900">Parent</option>
+                    <option className="text-gray-900">Sibling</option>
+                    <option className="text-gray-900">Spouse</option>
+                    <option className="text-gray-900">Friend</option>
+                    <option className="text-gray-900">Other</option>
                   </select>
                   <input
                     className="border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
