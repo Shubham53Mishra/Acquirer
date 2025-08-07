@@ -6,16 +6,39 @@ const Profile = () => {
     <>
       <Navbar />
       <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 py-6 px-2 md:px-8">
-        {/* Heading and Description */}
-        <div className="max-w-5xl mx-auto mb-8">
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-            Complete Your Investor Profile
-          </h1>
-          <p className="text-gray-500 text-base md:text-lg">
-            Help us understand your investment preferences and experience to
-            provide personalized opportunities that match your investment goals
-            and risk tolerance.
-          </p>
+        {/* Top Section: Left and Right */}
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+          {/* Left Side */}
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center mb-2">
+              <span className="text-xs font-semibold text-blue-700 bg-blue-100 px-2 py-1 rounded mr-2">
+                PROFILE SETUP
+              </span>
+              <span className="text-sm text-gray-500">Personal Information</span>
+            </div>
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+              Complete Your{" "}
+              <span className="font-extrabold">Investor Profile</span>
+            </h1>
+            <div className="border-2 border-blue-300 rounded-lg p-3 text-gray-600 text-base max-w-xl">
+              Help us understand your investment preferences and experience to
+              provide personalized opportunities that match your investment goals
+              and risk tolerance.
+            </div>
+          </div>
+          {/* Right Side */}
+          <div className="flex flex-col items-end w-full md:w-auto mt-6 md:mt-0 md:ml-8">
+            <div className="flex items-center mb-1">
+              <span className="text-gray-500 text-sm mr-2">Progress</span>
+              <span className="text-blue-600 font-bold text-base">20%</span>
+            </div>
+            <div className="w-40 bg-gray-200 rounded-full h-2">
+              <div
+                className="bg-blue-500 h-2 rounded-full"
+                style={{ width: "20%" }}
+              ></div>
+            </div>
+          </div>
         </div>
         {/* Progress Bar & Steps */}
         <div className="max-w-5xl mx-auto">
