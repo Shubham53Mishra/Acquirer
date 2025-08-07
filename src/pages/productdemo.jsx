@@ -4,7 +4,7 @@ import OtherNavbar from '../components/layout/OtherNavbar';
 import ProductShowcase from '../components/ui/ProductShowcase';
 import InteractiveDemo from '../components/ui/InteractiveDemo';
 import InnovationCard from '../components/ui/InnovationCard';
-import { Brain, HeartPulse, FlaskConical, MapPin, Clock, Eye, Star, Lock } from 'lucide-react';
+import { Brain, HeartPulse, FlaskConical, MapPin, Clock, Eye, Star, Lock, Zap, Link, BarChart2 } from 'lucide-react';
 
 const ProductDemo = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -125,25 +125,25 @@ const ProductDemo = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
           <InnovationCard 
             title="Advanced Neural Networks" 
-            icon="star" 
+            icon={<Star className="w-6 h-6 text-purple-500" />}
             color="purple"
             description="Proprietary AI algorithms trained on extensive medical datasets to achieve unprecedented accuracy levels in neurological diagnoses."
           />
           <InnovationCard 
             title="Lightning Fast Analysis" 
-            icon="zap" 
+            icon={<Zap className="w-6 h-6 text-green-500" />}
             color="green"
             description="Real-time processing that delivers comprehensive diagnostic reports in under 30 seconds, compared to traditional methods taking hours."
           />
           <InnovationCard 
             title="Seamless Integration" 
-            icon="link" 
+            icon={<Link className="w-6 h-6 text-orange-500" />}
             color="orange"
             description="Easy integration with existing hospital systems, EHRs, and medical imaging devices without disrupting workflows."
           />
           <InnovationCard 
             title="Intelligent Reporting" 
-            icon="chart" 
+            icon={<BarChart2 className="w-6 h-6 text-pink-500" />}
             color="pink"
             description="Automated, comprehensive reporting with actionable insights that help medical professionals make informed decisions."
           />
