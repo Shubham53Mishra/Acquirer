@@ -52,27 +52,27 @@ export default function FinancialInformation() {
               <h4 className="font-bold text-gray-900 mb-4">Investment Capacity</h4>
               <div className="grid grid-cols-2 gap-y-2 text-sm">
                 <div>
-                  <span className="text-gray-500">Net Worth</span>
+                  <span className="text-gray-700">Net Worth</span>
                   <div className="font-semibold text-gray-500">$10M - $50M</div>
                 </div>
                 <div>
-                  <span className="text-gray-500">Liquid Assets</span>
+                  <span className="text-gray-700">Liquid Assets</span>
                   <div className="font-semibold text-gray-500">$5M - $10M</div>
                 </div>
                 <div>
-                  <span className="text-gray-500">Investment Budget</span>
+                  <span className="text-gray-700">Investment Budget</span>
                   <div className="font-semibold text-gray-500">$1M - $5M</div>
                 </div>
                 <div>
-                  <span className="text-gray-500">Risk Tolerance</span>
+                  <span className="text-gray-700">Risk Tolerance</span>
                   <div className="font-semibold text-gray-500">Moderate to High</div>
                 </div>
                 <div>
-                  <span className="text-gray-500">Annual Income</span>
+                  <span className="text-gray-700">Annual Income</span>
                   <div className="font-semibold text-gray-500">$1M - $5M</div>
                 </div>
                 <div>
-                  <span className="text-gray-500">Credit Score</span>
+                  <span className="text-gray-700">Credit Score</span>
                   <div className="font-semibold text-gray-500">750-850</div>
                 </div>
               </div>
@@ -82,43 +82,43 @@ export default function FinancialInformation() {
               <h4 className="font-bold text-gray-900 mb-4">Financial Details</h4>
               <div className="grid grid-cols-2 gap-y-2 text-sm">
                 <div>
-                  <span className="text-gray-500">Source of Funds</span>
+                  <span className="text-gray-700">Source of Funds</span>
                   <div className="font-semibold text-gray-500">Business Income</div>
                 </div>
                 <div>
-                  <span className="text-gray-500">Expected Returns</span>
+                  <span className="text-gray-700">Expected Returns</span>
                   <div className="font-semibold text-gray-500">15-25%</div>
                 </div>
                 <div>
-                  <span className="text-gray-500">Primary Bank</span>
+                  <span className="text-gray-700">Primary Bank</span>
                   <div className="font-semibold text-gray-500">Goldman Sachs</div>
                 </div>
                 <div>
-                  <span className="text-gray-500">Debt Obligations</span>
+                  <span className="text-gray-700">Debt Obligations</span>
                   <div className="font-semibold text-gray-500">Low</div>
                 </div>
                 <div>
-                  <span className="text-gray-500">Investment Horizon</span>
+                  <span className="text-gray-700">Investment Horizon</span>
                   <div className="font-semibold text-gray-500">5-10 years</div>
                 </div>
                 <div>
-                  <span className="text-gray-500">Portfolio Allocation</span>
+                  <span className="text-gray-700">Portfolio Allocation</span>
                   <div className="font-semibold text-gray-500">Diversified</div>
                 </div>
                 <div>
-                  <span className="text-gray-500">Tax Bracket</span>
+                  <span className="text-gray-700">Tax Bracket</span>
                   <div className="font-semibold text-gray-500">35%+</div>
                 </div>
                 <div>
-                  <span className="text-gray-500">Financial Advisor</span>
+                  <span className="text-gray-700">Financial Advisor</span>
                   <div className="font-semibold text-gray-500">Yes - Private Wealth</div>
                 </div>
                 <div>
-                  <span className="text-gray-500">Insurance Coverage</span>
+                  <span className="text-gray-700">Insurance Coverage</span>
                   <div className="font-semibold text-gray-500">Comprehensive</div>
                 </div>
                 <div>
-                  <span className="text-gray-500">Estate Planning</span>
+                  <span className="text-gray-700">Estate Planning</span>
                   <div className="font-semibold text-gray-500">Complete</div>
                 </div>
               </div>

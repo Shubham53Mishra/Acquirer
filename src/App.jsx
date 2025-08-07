@@ -15,6 +15,8 @@ import ReviewSubmit from './pages/Reviewsubmit';
 import InvestorProfile from './pages/Investorprofile';
 import Companyinformation from './pages/Companyinformation';
 import FinancialInformation from './pages/Financialinformation';
+import InvestmentBackground from './pages/Investmentbackground';
+import LegalCompliance from './pages/Legalcompliance';
 export default function App() {
   return (
     <Routes>
@@ -33,6 +35,8 @@ export default function App() {
       <Route path="/investorprofile" element={<InvestorProfile />} />
       <Route path="/Companyinformation" element={<Companyinformation />} />
       <Route path="/financialinformation" element={<FinancialInformation />} />
+      <Route path="/investmentbackground" element={<InvestmentBackground />} />
+      <Route path="/legalcompliance" element={<LegalCompliance />} />
 
 
       
