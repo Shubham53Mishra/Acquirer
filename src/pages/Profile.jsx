@@ -208,14 +208,20 @@ const Profile = () => {
                 />
               </div>
               <div className="md:col-span-2">
-                <label className="block text-sm font-medium mb-1">
+                <label className="block text-sm font-medium mb-1 text-gray-500">
                   Nationality *
                 </label>
-                <select className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200">
-                  <option>United States</option>
-                  <option>India</option>
-                  <option>Canada</option>
-                  <option>Other</option>
+                <select
+                  className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 text-gray-400"
+                  defaultValue=""
+                >
+                  <option value="" disabled hidden>
+                    Select nationality
+                  </option>
+                  <option className="text-gray-900">United States</option>
+                  <option className="text-gray-900">India</option>
+                  <option className="text-gray-900">Canada</option>
+                  <option className="text-gray-900">Other</option>
                 </select>
               </div>
             </div>
