@@ -33,7 +33,7 @@ const Profile = () => {
               Complete Your{" "}
               <span className="font-extrabold">Investor Profile</span>
             </h1>
-            <div className="border-2 border-blue-300 rounded-lg p-3 text-gray-600 text-base max-w-xl">
+            <div className="rounded-lg p-3 text-gray-600 text-base max-w-xl">
               Help us understand your investment preferences and experience to
               provide personalized opportunities that match your investment goals
               and risk tolerance.
@@ -141,7 +141,7 @@ const Profile = () => {
               <div className="bg-blue-600 text-white rounded-full p-2 mr-2">
                 <User className="w-6 h-6" strokeWidth={2} />
               </div>
-              <h2 className="text-lg font-bold">Personal Information</h2>
+              <h2 className="text-lg font-bold text-gray-500">Personal Information</h2>
             </div>
             <p className="text-gray-500 text-sm mb-4">
               Please provide your basic personal details to help us verify your
@@ -149,7 +149,7 @@ const Profile = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium mb-1">
+                <label className="block text-sm font-medium mb-1 text-gray-500">
                   First Name *
                 </label>
                 <input
@@ -159,7 +159,7 @@ const Profile = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1">
+                <label className="block text-sm font-medium mb-1 text-gray-500">
                   Last Name *
                 </label>
                 <input
@@ -169,7 +169,7 @@ const Profile = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1">
+                <label className="block text-sm font-medium mb-1 text-gray-500">
                   Middle Name
                 </label>
                 <input
@@ -179,7 +179,7 @@ const Profile = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1">
+                <label className="block text-sm font-medium mb-1 text-gray-500">
                   Date of Birth *
                 </label>
                 <input
@@ -188,7 +188,7 @@ const Profile = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1">
+                <label className="block text-sm font-medium mb-1 text-gray-500">
                   Email Address *
                 </label>
                 <input
@@ -198,7 +198,7 @@ const Profile = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1">
+                <label className="block text-sm font-medium mb-1 text-gray-500">
                   Phone Number *
                 </label>
                 <input
@@ -232,7 +232,7 @@ const Profile = () => {
               <div className="bg-blue-600 text-white rounded-full p-2 mr-2">
                 <MapPin className="w-6 h-6" strokeWidth={2} />
               </div>
-              <h2 className="text-lg font-bold">Contact Information</h2>
+              <h2 className="text-lg font-bold text-gray-500">Contact Information</h2>
             </div>
             <p className="text-gray-500 text-sm mb-4">
               Please provide your complete contact details including address,
@@ -240,7 +240,7 @@ const Profile = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="md:col-span-2">
-                <label className="block text-sm font-medium mb-1">
+                <label className="block text-sm font-medium mb-1 text-gray-500">
                   Full Address *
                 </label>
                 <input
@@ -252,7 +252,9 @@ const Profile = () => {
               {/* Group City, State, ZIP Code in one row */}
               <div className="md:col-span-2 flex flex-col md:flex-row gap-4">
                 <div className="flex-1">
-                  <label className="block text-sm font-medium mb-1">City *</label>
+                  <label className="block text-sm font-medium mb-1 text-gray-500">
+                    City *
+                  </label>
                   <input
                     className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
                     type="text"
@@ -260,7 +262,9 @@ const Profile = () => {
                   />
                 </div>
                 <div className="flex-1">
-                  <label className="block text-sm font-medium mb-1">State *</label>
+                  <label className="block text-sm font-medium mb-1 text-gray-500">
+                    State *
+                  </label>
                   <select
                     className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 text-gray-400"
                     onChange={e => e.target.classList.toggle('text-gray-400', e.target.selectedIndex === 0)}
@@ -276,7 +280,9 @@ const Profile = () => {
                   </select>
                 </div>
                 <div className="flex-1">
-                  <label className="block text-sm font-medium mb-1">ZIP Code *</label>
+                  <label className="block text-sm font-medium mb-1 text-gray-500">
+                    ZIP Code *
+                  </label>
                   <input
                     className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
                     type="text"
@@ -312,38 +318,60 @@ const Profile = () => {
                 </div>
               </div>
               <div className="md:col-span-2">
-                <label className="block text-sm font-medium mb-1 mt-2 text-gray-500">
+                <label className="block text-sm font-bold mb-1 mt-2">
                   Emergency Contact Information
                 </label>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                  <input
-                    className="border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                    type="text"
-                    placeholder="Contact Name"
-                  />
-                  <select
-                    className="border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 text-gray-400"
-                    defaultValue=""
-                  >
-                    <option value="" disabled hidden>
-                      Select relationship
-                    </option>
-                    <option className="text-gray-900">Parent</option>
-                    <option className="text-gray-900">Sibling</option>
-                    <option className="text-gray-900">Spouse</option>
-                    <option className="text-gray-900">Friend</option>
-                    <option className="text-gray-900">Other</option>
-                  </select>
-                  <input
-                    className="border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                    type="tel"
-                    placeholder="Contact Phone"
-                  />
-                  <input
-                    className="border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                    type="email"
-                    placeholder="Contact Email"
-                  />
+                <div className="flex flex-col md:flex-row gap-2">
+                  <div className="flex-1">
+                    <label className="block text-xs font-semibold mb-1 text-gray-500">
+                      Contact Name *
+                    </label>
+                    <input
+                      className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                      type="text"
+                      placeholder="Enter emergency contact name"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <label className="block text-xs font-semibold mb-1 text-gray-500">
+                      Relationship *
+                    </label>
+                    <select
+                      className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 text-gray-400"
+                      defaultValue=""
+                    >
+                      <option value="" disabled hidden>
+                        Select relationship
+                      </option>
+                      <option className="text-gray-900">Parent</option>
+                      <option className="text-gray-900">Sibling</option>
+                      <option className="text-gray-900">Spouse</option>
+                      <option className="text-gray-900">Friend</option>
+                      <option className="text-gray-900">Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="flex flex-col md:flex-row gap-2 mt-2">
+                  <div className="flex-1">
+                    <label className="block text-xs font-semibold mb-1 text-gray-500">
+                      Contact Phone *
+                    </label>
+                    <input
+                      className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                      type="tel"
+                      placeholder="Enter emergency contact phone"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <label className="block text-xs font-semibold mb-1 text-gray-500">
+                      Contact Email
+                    </label>
+                    <input
+                      className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                      type="email"
+                      placeholder="Enter emergency contact email"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
