@@ -12,6 +12,7 @@ import CompanyDetails from './pages/Companydetails';
 import Financialprofile from './pages/Financialprofile';
 import InvestmentExperience from './pages/Investmentexperience';
 import ReviewSubmit from './pages/Reviewsubmit';
+import InvestorProfile from './pages/Investorprofile';
 
 export default function App() {
   return (
@@ -28,6 +29,8 @@ export default function App() {
       <Route path="/financialprofile" element={<Financialprofile />} />
       <Route path="/investmentexperience" element={<InvestmentExperience />} />
       <Route path="/reviewsubmit" element={<ReviewSubmit />} />
+      <Route path="/investorprofile" element={<InvestorProfile />} />
+
 
     </Routes>
   );
