@@ -10,6 +10,7 @@ import Features from './pages/Features';
 import Profile from './pages/Profile';
 import CompanyDetails from './pages/Companydetails';
 import Financialprofile from './pages/Financialprofile';
+import InvestmentExperience from './pages/Investmentexperience';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
       <Route path="/profile" element={<Profile />} />
       <Route path="/companydetails" element={<CompanyDetails />} />
       <Route path="/financialprofile" element={<Financialprofile />} />
+      <Route path="/investmentexperience" element={<InvestmentExperience />} />
 
     </Routes>
   );
