@@ -13,8 +13,10 @@ import {
   Users,
   UserCheck,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Navbar />
@@ -89,16 +91,20 @@ const Profile = () => {
                 Basic details & identity
               </span>
             </div>
-            <div className="flex-1 min-w-[80px] flex flex-col items-center">
-              <div className="bg-gray-200 text-gray-400 rounded-full p-2 mb-1">
+            <div
+              className="flex-1 min-w-[80px] flex flex-col items-center cursor-pointer"
+              onClick={() => navigate("/companydetails")}
+            >
+              <div className="bg-blue-600 text-white rounded-full p-2 mb-1">
                 <Building2 className="w-6 h-6" strokeWidth={2} />
               </div>
-              <span className="text-xs font-semibold text-gray-500">
+              <span className="text-xs font-semibold text-blue-700">
                 Company Details
               </span>
               <span className="text-[10px] text-gray-400">
                 Business information
               </span>
+              <div className="w-12 h-1 bg-blue-600 rounded-full mt-2"></div>
             </div>
             <div className="flex-1 min-w-[80px] flex flex-col items-center">
               <div className="bg-gray-200 text-gray-400 rounded-full p-2 mb-1">
