@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import jsPDF from "jspdf";
 import Navbar from "../components/layout/Navbar";
+import { X } from "lucide-react"; // Add this import at the top
 
 export default function SubmitOffer() {
   const [showNdaModal, setShowNdaModal] = useState(false);
@@ -33,10 +34,10 @@ export default function SubmitOffer() {
               <h2 className="text-2xl font-bold mb-2 text-gray-600">Non-Disclosure Agreement</h2>
               <p className="text-gray-500 mb-4">Please review and accept the NDA terms before proceeding</p>
               <button
-                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-xl"
+                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
                 onClick={() => setShowNdaModal(false)}
               >
-                &times;
+                <X size={28} />
               </button>
               <div className="flex justify-end mb-4">
                 <button
@@ -102,9 +103,15 @@ export default function SubmitOffer() {
           >
             <div className="bg-white rounded-lg shadow-lg w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl p-0 relative" style={{maxHeight: '90vh', overflowY: 'auto'}}>
               {/* Header */}
-              <div className="bg-indigo-700 rounded-t-lg px-8 py-6">
+              <div className="bg-indigo-700 rounded-t-lg px-8 py-6 relative">
                 <h2 className="text-2xl font-bold text-white mb-1">NDA Digital Signature</h2>
                 <p className="text-sm text-indigo-100">Secure electronic signature for Non-Disclosure Agreement</p>
+                <button
+                  className="absolute top-4 right-4 text-white hover:text-gray-300"
+                  onClick={() => setShowSignatureModal(false)}
+                >
+                  <X size={28} />
+                </button>
               </div>
               {/* Content */}
               <div className="px-8 py-8">
@@ -203,10 +210,10 @@ export default function SubmitOffer() {
             <div className="bg-white rounded-lg shadow-lg w-full max-w-md p-8 relative" style={{maxHeight: '90vh', overflowY: 'auto'}}>
               <h2 className="text-xl font-bold mb-4 text-indigo-700">Draw Your Signature</h2>
               <button
-                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-xl"
+                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
                 onClick={() => setShowDrawSignatureModal(false)}
               >
-                &times;
+                <X size={28} />
               </button>
               <div className="mb-4">
                 {/* Replace below with a signature pad if needed */}
