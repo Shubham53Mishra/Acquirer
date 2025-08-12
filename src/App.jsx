@@ -17,6 +17,7 @@ import Companyinformation from './pages/Companyinformation';
 import FinancialInformation from './pages/Financialinformation';
 import InvestmentBackground from './pages/Investmentbackground';
 import LegalCompliance from './pages/Legalcompliance';
+import SubmitOffer from './pages/sumbitoffer'
 export default function App() {
   return (
     <Routes>
@@ -37,6 +38,9 @@ export default function App() {
       <Route path="/financialinformation" element={<FinancialInformation />} />
       <Route path="/investmentbackground" element={<InvestmentBackground />} />
       <Route path="/legalcompliance" element={<LegalCompliance />} />
+      <Route path="/sumbitoffer" element={<SubmitOffer />} />
+     
+
 
 
       
