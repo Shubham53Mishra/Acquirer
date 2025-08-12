@@ -101,6 +101,9 @@ export default function MyOffers() {
   const [sortBy, setSortBy] = useState("newest");
   const [showFilters, setShowFilters] = useState(false);
   const [showSort, setShowSort] = useState(false);
+  const [showHeadstartModal, setShowHeadstartModal] = useState(false);
+  const [showOpportunityModal, setShowOpportunityModal] = useState(false);
+  const [showNdaModal, setShowNdaModal] = useState(false); // NDA modal for next popup
   const navigate = useNavigate();
 
   // Helper function to convert time ago to sortable number
@@ -148,7 +151,10 @@ export default function MyOffers() {
               Discover innovative startups and investment opportunities
             </p>
           </div>
-          <button className="mt-4 md:mt-0 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors">
+          <button
+            className="mt-4 md:mt-0 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors"
+            onClick={() => setShowHeadstartModal(true)}
+          >
             Headstart Contact
           </button>
         </div>
@@ -306,6 +312,146 @@ export default function MyOffers() {
             </button>
           </div>
         </div>
+
+        {/* Headstart Contact Modal */}
+        {showHeadstartModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-30">
+            <div className="bg-white rounded-lg shadow-lg max-w-md w-full p-8 relative">
+              <button
+                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+                onClick={() => setShowHeadstartModal(false)}
+              >
+                &times;
+              </button>
+              <div className="flex flex-col items-center">
+                <div className="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                  <span className="text-3xl text-indigo-500">📄</span>
+                </div>
+                <h2 className="text-xl font-bold mb-2 text-gray-700 text-center">Connect with Headstart</h2>
+                <p className="text-gray-500 text-center mb-4">
+                  Provide business details to get qualified and unlock investment opportunities.
+                </p>
+                <div className="bg-yellow-50 border border-yellow-300 rounded p-3 mb-4 text-xs text-gray-700">
+                  <b>Important Notification</b><br />
+                  Please ensure your business details are accurate and up-to-date. All submitted information will be reviewed by our team for eligibility.
+                </div>
+                <div className="bg-gray-50 border border-gray-200 rounded p-3 mb-4 text-xs text-gray-700">
+                  <b>Special Note:</b><br />
+                  Only verified businesses will be able to access premium investment opportunities and connect with top investors.
+                </div>
+                <div className="mt-2 mb-4 text-center text-gray-600 text-sm">
+                  Ready to grow & unlock investment opportunities?
+                </div>
+                <button
+                  className="px-6 py-2 bg-indigo-600 text-white rounded-lg font-semibold"
+                  onClick={() => {
+                    setShowHeadstartModal(false);
+                    setShowOpportunityModal(true);
+                  }}
+                >
+                  Get Started
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Investment Opportunity Access Modal */}
+        {showOpportunityModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-30">
+            <div className="bg-white rounded-lg shadow-lg max-w-lg w-full p-8 relative">
+              <button
+                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+                onClick={() => setShowOpportunityModal(false)}
+              >
+                &times;
+              </button>
+              <div className="flex flex-col items-center">
+                <div className="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                  <span className="text-3xl text-indigo-500">📅</span>
+                </div>
+                <h2 className="text-2xl font-bold mb-2 text-gray-700 text-center">Investment Opportunity Access</h2>
+                <p className="text-gray-500 text-center mb-4">
+                  Headstart curates high-quality investment opportunities for an exclusive network of entrepreneurs and investors. Our filtering process ensures you see only the most promising deals that match your investment criteria.
+                </p>
+                <div className="mb-4 w-full flex flex-col items-center">
+                  <span className="font-medium text-gray-700 mb-2">Are you interested in Headstart filtered projects?</span>
+                  <div className="flex gap-6 justify-center">
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="interest"
+                        defaultChecked
+                        className="accent-indigo-600"
+                        onClick={() => {
+                          setShowOpportunityModal(false);
+                          setShowNdaModal(true);
+                        }}
+                      />
+                      <span className="text-gray-700 font-medium">Yes, I'm interested</span>
+                    </label>
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input type="radio" name="interest" className="accent-indigo-600" />
+                      <span className="text-gray-700 font-medium">No, not at this time</span>
+                    </label>
+                  </div>
+                </div>
+                <div className="bg-green-50 border border-green-200 rounded p-4 mt-4 text-xs text-green-700 w-full text-center">
+                  <b>Thank you for your interest!</b><br />
+                  We understand that timing is important in investment decisions.<br />
+                  Feel free to reach out to us anytime when you're ready to explore investment opportunities.<br />
+                  Our team is always here to help. You can also email us at <span className="font-semibold">investment@headstart.com</span> or click the link in your dashboard.<br />
+                  <span className="text-green-600">Best of luck on your investment journey!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* NDA Modal (matches your image) */}
+        {showNdaModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-30">
+            <div className="bg-white rounded-lg shadow-lg max-w-lg w-full p-8 relative">
+              <button
+                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+                onClick={() => setShowNdaModal(false)}
+              >
+                &times;
+              </button>
+              <div className="flex flex-col items-center">
+                <div className="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                  <span className="text-3xl text-indigo-500">📄</span>
+                </div>
+                <h2 className="text-2xl font-bold mb-2 text-gray-700 text-center">Investment Opportunity Access</h2>
+                <p className="text-gray-500 text-center mb-4">
+                  Headstart curates high-quality investment opportunities from our extensive network of entrepreneurs and startups. Our filtering process ensures you see only the most promising deals that match your investment criteria.
+                </p>
+                <div className="mb-4 w-full flex flex-col items-center">
+                  <span className="font-medium text-gray-700 mb-2">Are you interested in Headstart filtered projects?</span>
+                  <div className="flex gap-6 justify-center">
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input type="radio" name="nda_interest" defaultChecked className="accent-indigo-600" />
+                      <span className="text-gray-700 font-medium">Yes, I'm interested</span>
+                    </label>
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input type="radio" name="nda_interest" className="accent-indigo-600" />
+                      <span className="text-gray-700 font-medium">No, not at this time</span>
+                    </label>
+                  </div>
+                </div>
+                <button
+                  className="px-6 py-2 bg-indigo-600 text-white rounded-lg font-semibold mt-4"
+                  onClick={() => {
+                    setShowNdaModal(false);
+                    navigate('/submitoffer');
+                  }}
+                >
+                  Continue to NDA
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

@@ -18,6 +18,7 @@ import FinancialInformation from './pages/Financialinformation';
 import InvestmentBackground from './pages/Investmentbackground';
 import LegalCompliance from './pages/Legalcompliance';
 import SubmitOffer from './pages/submitoffer'
+import Nondisclosure from './pages/nondisclosure';
 export default function App() {
   return (
     <Routes>
@@ -39,6 +40,8 @@ export default function App() {
       <Route path="/investmentbackground" element={<InvestmentBackground />} />
       <Route path="/legalcompliance" element={<LegalCompliance />} />
       <Route path="/submitoffer" element={<SubmitOffer />} />
+      <Route path="/nondisclosure" element={<Nondisclosure />} />
+
 
 
 
