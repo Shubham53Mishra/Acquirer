@@ -72,7 +72,7 @@ export default function SubmitOffer() {
                 <label className="block text-xs font-medium mb-1 text-gray-400">
                   Currency
                 </label>
-                <select className="w-full border rounded-lg p-1.5 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <select className="w-full border rounded-lg p-1.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-gray-400">
                   <option>Indian Rupee (INR)</option>
                   <option>US Dollar (USD)</option>
                   <option>Euro (EUR)</option>
