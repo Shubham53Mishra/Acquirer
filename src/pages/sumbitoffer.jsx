@@ -6,7 +6,7 @@ export default function SubmitOffer() {
     <div className="min-h-screen bg-gray-50 p-4">
       <Navbar />
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-xl font-bold mb-1 text-gray-600 ">Submit Your Offer</h1>
+  <h1 className="text-xl font-bold mb-1 mt-8 text-gray-600">Submit Your Offer</h1>
         <p className="text-gray-500 mb-4">
           Make an investment offer for EcoTech Solutions
         </p>
